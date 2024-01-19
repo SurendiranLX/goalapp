@@ -12,8 +12,8 @@ const Login = forwardRef(({ status, ...props }, ref) => {
           <Image
             src="/login-image.png"
             alt=""
-            width={250}
-            height={250}
+            width={273}
+            height={273}
             style={{objectFit:"contain"}}
             // blurDataURL="data:..." automatically provided
             // placeholder="blur" // Optional blur-up while loading
