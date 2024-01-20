@@ -3,7 +3,7 @@
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
-import ProjectCard from "./../components/common/ProjectCard";
+import TaskCard from "../components/common/taskcard";
 import TaskProgress from "../components/common/taskprogress";
 import TaskUpload from "../components/common/taskUpload";
 
@@ -25,14 +25,14 @@ export default function TaskDetail() {
             // blurDataURL="data:..." automatically provided
             // placeholder="blur" // Optional blur-up while loading
           />
-          <span>React Native</span>
+          <span className="inline-block ml-1">React Native</span>
         </div>
         <h1 className="font-extrabold text-5xl mt-2 mb-2">
           Gyro based 3D Card in React app using Reanimated 2
         </h1>
         <div className="text-[#373633] font-bold">By Swng Pvt. Ltd.</div>
         {/* Task Progress */}
-        <TaskProgress onClick={openModal} />
+        <TaskProgress onClick={openModal} status={"nottaken"}/>
         {/* Task Progress End*/}
 
         {/* Task Submit */}
@@ -40,6 +40,10 @@ export default function TaskDetail() {
         {/* Task Submit End */}
 
         <div className="font-bold mt-6 text-2xl">Task Brief</div>
+        {/* Task Description */}
+        <div className="flex mt-6">
+
+        </div>
       </div>
       <div className="w-[423px]">
         <div className="rounded-[58px] w-[423px] h-[423px] overflow-hidden">

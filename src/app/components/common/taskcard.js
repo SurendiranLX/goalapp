@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const ProjectCard = ({ key }) => {
+const TaskCard = ({ key }) => {
   return (
     <div
       key={key}
@@ -33,4 +33,4 @@ const ProjectCard = ({ key }) => {
   );
 };
 
-export default ProjectCard;
+export default TaskCard;

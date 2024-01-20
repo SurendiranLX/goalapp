@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
-import ProjectCard from "./../components/common/ProjectCard";
+import TaskCard from "../components/common/taskcard";
 
 export default function Tasks() {
   const items = Array.from({ length: 10 }, (_, index) => index + 1);
@@ -27,8 +27,6 @@ export default function Tasks() {
                   alt=""
                   width={20}
                   height={20}
-                  // blurDataURL="data:..." automatically provided
-                  // placeholder="blur" // Optional blur-up while loading
                 />
                 <span>React Native</span>
               </div>
@@ -39,7 +37,7 @@ export default function Tasks() {
       {/* Filter-by end */}
       <div className="grid grid-cols-4 grid-rows-3 gap-x-10 gap-y-10 mb-14">
         {items.map((item) => (
-          <ProjectCard key={item} />
+          <TaskCard key={item} />
         ))}
       </div>
     </div>

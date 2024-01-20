@@ -6,7 +6,7 @@ import assessments from "../../public/assessments.png";
 import skill from "../../public/skill.png";
 import badges from "../../public/badges.png";
 import profile from "../../public/profilecard.png";
-import ProjectCard from "./components/common/ProjectCard";
+import TaskCard from "./components/common/taskcard";
 
 export default function Home() {
   const items = Array.from({ length: 10 }, (_, index) => index + 1);
@@ -47,7 +47,7 @@ export default function Home() {
           </div>
           <div className="flex flex-row w-full mt-20 max-w-[100vw] overflow-x-scroll [&>*:nth-child(1)]:ml-4">
             {items.map((item) => (
-              <ProjectCard key={item} />
+              <TaskCard key={item} />
             ))}
           </div>
         </section>
