@@ -22,12 +22,7 @@ export default function Tasks() {
                 key={item}
                 class="badge min-w-[50px] h-[48px] flex-shrink-0 text-lg border-[#1A1A1A] mx-2 px-4 cursor-pointer"
               >
-                <Image
-                  src="/react.jpg"
-                  alt=""
-                  width={20}
-                  height={20}
-                />
+                <Image src="/react.jpg" alt="" width={20} height={20} />
                 <span>React Native</span>
               </div>
             ))}
@@ -37,7 +32,12 @@ export default function Tasks() {
       {/* Filter-by end */}
       <div className="grid grid-cols-4 grid-rows-3 gap-x-10 gap-y-10 mb-14">
         {items.map((item) => (
-          <TaskCard key={item} />
+          <TaskCard
+            key={item}
+            image="/3dcard.png"
+            title="Gyro based 3D Card"
+            tags={["React Native", "Level 1"]}
+          />
         ))}
       </div>
     </div>

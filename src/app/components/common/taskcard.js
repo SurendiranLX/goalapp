@@ -1,36 +1,49 @@
 import React from "react";
 import Image from "next/image";
+import PropTypes from "prop-types";
 
-const TaskCard = ({ key }) => {
+const TaskCard = ({ taskKey, image, title, tags }) => {
   return (
     <div
-      key={key}
+      key={taskKey}
       className="w-[270px] h-[270px] flex-shrink-0 inline-block float-left rounded-[24px] relative overflow-x-scroll mr-4"
     >
+      {/* Task Image */}
       <Image
-        src="/3dcard.png"
-        alt="igotskills"
+        src={image}
+        alt={title}
         size={270}
         fill
         style={{
           objectFit: "cover",
         }}
-        // blurDataURL="data:..." automatically provided
-        // placeholder="blur" // Optional blur-up while loading
       />
-      <div className="bg-[#000]/40 backdrop-blur-md absolute bottom-0 px-2 py-2">
-        <div className="text-[13px] text-white leading-4">
-          Gyro based 3D Card in React app using Reanimated 2
-        </div>
-        <div className="text-xs text-white mt-2">By Swng Pvt. Ltd.</div>
+      
+      <div className="bg-[#000]/40 backdrop-blur-md absolute bottom-0 w-full px-3 py-2 rounded-t-[24px]">
+        {/* Task Title */}
+        <div className="text-sm font-bold text-white leading-4">{title}</div>
+        <div className="text-xs font-bold mt-2 text-white">By Swng Pvt. Ltd.</div>
+        {/* Task Tags */}
         <div className="flex flex-row mt-2">
-          <div className="text-sm min-w-[80px] px-2 h-[24px] border-[0.5px] border-[#fff] rounded-[24px] mr-2 text-white">
-            React Native
-          </div>
+          {tags.map((tag, index) => (
+            <div
+              key={index}
+              className="text-sm min-w-[80px] justify-center flex items-center px-2 h-[24px] border-[0.5px] border-[#fff] rounded-[24px] mr-2 text-white"
+            >
+              {tag}
+            </div>
+          ))}
         </div>
       </div>
     </div>
   );
+};
+
+TaskCard.propTypes = {
+  taskKey: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  tags: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default TaskCard;

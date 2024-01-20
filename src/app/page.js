@@ -47,7 +47,12 @@ export default function Home() {
           </div>
           <div className="flex flex-row w-full mt-20 max-w-[100vw] overflow-x-scroll [&>*:nth-child(1)]:ml-4">
             {items.map((item) => (
-              <TaskCard key={item} />
+              <TaskCard
+                key={item}
+                image="/3dcard.png"
+                title="Gyro based 3D Card"
+                tags={["React Native", "Level 1"]}
+              />
             ))}
           </div>
         </section>
