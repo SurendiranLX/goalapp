@@ -126,6 +126,7 @@ export default function MyProfile() {
               <span className="font-extrabold">GET MORE</span>
             </button>
           </div>
+          {/* Skill Badges */}
           <div className="mt-6 mb-8">
             <div className="text-md text-[#373633] font-bold mb-4">
               Skill Badges
@@ -152,6 +153,7 @@ export default function MyProfile() {
               ))}
             </div>
           </div>
+          {/* Knowledge Badges */}
           <div className="mb-12">
             <div className="text-md text-[#373633] font-bold mb-4">
               Knowledge Badges
@@ -180,6 +182,7 @@ export default function MyProfile() {
           </div>
         </div>
         <div className="flex-1">
+          {/* Experience */}
           <div className="flex flex-col bg-white shadow-md w-full min-h-20 rounded-md p-4">
             <div className="flex flex-row items-center">
               <Image
@@ -206,6 +209,7 @@ export default function MyProfile() {
               </div>
             </div>
           </div>
+          {/* Education */}
           <div className="flex bg-white shadow-md w-full mt-10 min-h-20 rounded-md p-4">
             <div className="flex flex-row items-center">
               <Image
@@ -217,6 +221,17 @@ export default function MyProfile() {
                 // placeholder="blur" // Optional blur-up while loading
               />
               <div className="font-bold text-lg ml-2">Education (Graduate)</div>
+            </div>
+            <div className="flex flex-row justify-between my-8">
+              <div className="flex flex-col flex-1">
+                <div className="font-bold text-[#373633] text-md">
+                  Ravindra Bharathi High School
+                </div>
+                <div className="text-[#373633] text-sm">B.Tech</div>
+              </div>
+              <div className="font-bold text-[#37363360] text-md">
+                May 2019- January 2022
+              </div>
             </div>
           </div>
         </div>
