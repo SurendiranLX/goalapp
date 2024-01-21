@@ -42,6 +42,75 @@ export default function TaskDetail() {
         <div className="font-bold mt-6 text-2xl">Task Brief</div>
         {/* Task Description */}
         <div className="flex mt-6"></div>
+        {/* Comments */}
+        <div className="bg-white rounded-[58px] mt-8 p-8">
+          <div className="flex">
+            <Image
+              src="/comment.svg"
+              alt=""
+              width={20}
+              height={20}
+              // blurDataURL="data:..." automatically provided
+              // placeholder="blur" // Optional blur-up while loading
+            />
+            <div className="font-bold text-xl ml-2">Comments (45)</div>
+          </div>
+          {/* Comment input box */}
+          <div className="mt-4 mb-4">
+            <div className="flex">
+              <Image
+                src="/react.jpg"
+                alt=""
+                width={74}
+                height={74}
+                className="rounded-[37px] mr-4 flex-shrink-0"
+                // blurDataURL="data:..." automatically provided
+                // placeholder="blur" // Optional blur-up while loading
+              />
+              <textarea
+                placeholder="What are your thoughts on this task?"
+                class="textarea textarea-bordered textarea-md w-full"
+              ></textarea>
+            </div>
+            <div className="w-full flex-row flex justify-end mt-4 pb-8 border border-x-transparent border-t-transparent  border-b-[#707070]">
+              <button className="btn relative h-[28px] min-w-[168px] rounded-[24px] text-[#fff] bg-[#000] border-[#1A1A1A] hover:bg-[#000] hover:border-[#1A1A1A]">
+                <span className="font-extrabold">POST COMMENT</span>
+              </button>
+            </div>
+          </div>
+          <div className="flex flex-row">
+            {/* comments */}
+            <div className="flex my-4">
+              <Image
+                src="/react.jpg"
+                alt=""
+                width={74}
+                height={74}
+                className="rounded-[37px] mr-4 flex-shrink-0"
+                // blurDataURL="data:..." automatically provided
+                // placeholder="blur" // Optional blur-up while loading
+              />
+              <div>
+                <div>
+                  <span className="text-md font-bold inline-block mr-2">
+                    @Muggi
+                  </span>
+                  <span className="text-sm opacity-60">2 hours ago</span>
+                </div>
+                <div className="mt-2 text-sm">
+                  I think this project can be built up on react js with that
+                  reanimated 2 package. Make sure download the latest one from
+                  this link https://www.reanimated.com/v2.213
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="w-full flex-row flex justify-center mt-4 pb-8">
+            <button className="btn relative h-[28px] min-w-[168px] rounded-[24px] text-[#000] bg-[#fff] border-[#1A1A1A] hover:bg-[#fff] hover:border-[#1A1A1A]">
+              <span className="font-extrabold">SHOW MORE</span>
+            </button>
+          </div>
+        </div>
       </div>
       <div className="w-[423px]">
         <div className="rounded-[58px] w-[423px] h-[423px] overflow-hidden">
