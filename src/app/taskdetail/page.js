@@ -93,6 +93,7 @@ export default function TaskDetail() {
                   <div className="text-sm font-light">Mugesh Murugan</div>
                 </div>
               </li>
+              <div className="my-4 text-sm text-center">+53 more</div>
             </ul>
           </div>
         </div>
