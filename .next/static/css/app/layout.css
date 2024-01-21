@@ -2145,6 +2145,9 @@ html {
 .rounded-xl {
   border-radius: 0.75rem;
 }
+.rounded-\[26px\] {
+  border-radius: 26px;
+}
 .rounded-b-\[24px\] {
   border-bottom-right-radius: 24px;
   border-bottom-left-radius: 24px;

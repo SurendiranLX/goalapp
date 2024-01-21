@@ -3,6 +3,7 @@
 import { useEffect, useState, useRef } from "react";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import logo from "../../../../public/logo.svg";
 import greenHand from "../../../../public/green_hand.svg";
 import yellowHand from "../../../../public/yellow_hand.svg";
@@ -14,17 +15,29 @@ const Header = () => {
   const openModal = () => {
     modalRef.current.showModal();
   };
+
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
+
+  const handleMouseEnter = () => {
+    setDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    setDropdownOpen(false);
+  };
   return (
     <header className="flex w-full max-w-screen-xl py-4 z-[1]">
       <div className="w-[200px]">
-        <Image
-          src={logo}
-          alt="igotskills"
-          width={104}
-          height={48}
-          // blurDataURL="data:..." automatically provided
-          // placeholder="blur" // Optional blur-up while loading
-        />
+        <Link href="/">
+          <Image
+            src={logo}
+            alt="igotskills"
+            width={104}
+            height={48}
+            // blurDataURL="data:..." automatically provided
+            // placeholder="blur" // Optional blur-up while loading
+          />
+        </Link>
       </div>
       <div className="flex-1 flex justify-end items-center">
         <div className="w-[360px]">
@@ -46,10 +59,12 @@ const Header = () => {
           />
           <span className="font-extrabold">CONTACT</span>
         </button>
-        <div className="relative">
-          <button
-            className="btn relative h-[48px] min-w-[138px] border-transparent hover:border-transparent rounded-[48px] text-[#fff] bg-[#1A1A1A] hover:bg-[#1A1A1A]"
-          >
+        <div
+          className="relative"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <button className="btn relative h-[48px] min-w-[138px] border-transparent hover:border-transparent rounded-[48px] text-[#fff] bg-[#1A1A1A] hover:bg-[#1A1A1A]">
             <Image
               src="/react.jpg"
               alt="user"
@@ -61,34 +76,38 @@ const Header = () => {
             />
             <span className="font-extrabold">@muggi.m</span>
           </button>
-          <div className="absolute bg-[#1A1A1A] w-[145.7px] h-[120px] -z-[1] top-6 rounded-b-[24px]">
-            <ul className="flex items-end flex-col justify-end h-full mt-1">
-              <li className="w-full py-4 flex px-4 border-t-[1px] border-t-[#707070] cursor-pointer">
-                <Image
-                  src="/about.svg"
-                  alt="user" 
-                  width={20}
-                  height={20}
-                  className="rounded-[17px] mr-2"
-                  // blurDataURL="data:..." automatically provided
-                  // placeholder="blur" // Optional blur-up while loading
-                />
-                <div className="text-md text-white">My Profile</div>
-              </li>
-              <li className="w-full pb-4 flex px-4 cursor-pointer">
-                <Image
-                  src="/logout.svg"
-                  alt="logout"
-                  width={20}
-                  height={20}
-                  className="rounded-[17px] mr-2"
-                  // blurDataURL="data:..." automatically provided
-                  // placeholder="blur" // Optional blur-up while loading
-                />
-                <div className="text-md text-white">Logout</div>
-              </li>
-            </ul>
-          </div>
+          {isDropdownOpen && (
+            <div className="absolute bg-[#1A1A1A] w-[145.7px] h-[120px] -z-[1] top-6 rounded-b-[24px]">
+              <ul className="flex items-end flex-col justify-end h-full mt-1">
+                <li className="w-full py-4 flex px-4 border-t-[1px] border-t-[#707070] cursor-pointer">
+                  <Image
+                    src="/about.svg"
+                    alt="user"
+                    width={20}
+                    height={20}
+                    className="rounded-[17px] mr-2"
+                    // blurDataURL="data:..." automatically provided
+                    // placeholder="blur" // Optional blur-up while loading
+                  />
+                  <Link href="/myprofile">
+                    <div className="text-md text-white">My Profile</div>
+                  </Link>
+                </li>
+                <li className="w-full pb-4 flex px-4 cursor-pointer">
+                  <Image
+                    src="/logout.svg"
+                    alt="logout"
+                    width={20}
+                    height={20}
+                    className="rounded-[17px] mr-2"
+                    // blurDataURL="data:..." automatically provided
+                    // placeholder="blur" // Optional blur-up while loading
+                  />
+                  <div className="text-md text-white">Logout</div>
+                </li>
+              </ul>
+            </div>
+          )}
         </div>
         <button
           onClick={openModal}

@@ -1,6 +1,7 @@
 {
   "/taskdetail/page": "app/taskdetail/page.js",
-  "/tasks/page": "app/tasks/page.js",
   "/page": "app/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
+  "/tasks/page": "app/tasks/page.js",
+  "/editprofile/page": "app/editprofile/page.js",
+  "/myprofile/page": "app/myprofile/page.js"
 }

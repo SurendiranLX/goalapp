@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Link from "next/link";
 export default function MyProfile() {
   const items = Array.from({ length: 4 }, (_, index) => index + 1);
   const items2 = Array.from({ length: 4 }, (_, index) => index + 1);
@@ -83,9 +83,11 @@ export default function MyProfile() {
               <span className="inline-block ml-4">68%</span>
             </div>
           </div>
-          <button className="btn relative h-[28px] min-w-[138px] rounded-[24px] text-[#000] bg-[#fff] border-[#1A1A1A] hover:bg-[#fff] hover:border-[#1A1A1A]">
-            <span className="font-extrabold">EDIT PROFILE</span>
-          </button>
+          <Link href="/editprofile">
+            <button className="btn relative h-[28px] min-w-[138px] rounded-[24px] text-[#000] bg-[#fff] border-[#1A1A1A] hover:bg-[#fff] hover:border-[#1A1A1A]">
+              <span className="font-extrabold">EDIT PROFILE</span>
+            </button>
+          </Link>
         </div>
       </div>
 
