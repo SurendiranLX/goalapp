@@ -4,6 +4,7 @@ export default function EditProfile() {
   return (
     <div className="flex flex-col justify-center w-full max-w-screen-xl mt-6 mb-12">
       <h1 className="font-extrabold text-5xl mt-6 mb-2">Edit Profile</h1>
+      {/* About you */}
       <div className="w-full flex flex-col items-start justify-between bg-white relative shadow-md rounded-xl mt-4 pl-8 pr-16 py-6">
         <div className="flex flex-row items-center flex-1 mb-8">
           <Image
@@ -58,6 +59,18 @@ export default function EditProfile() {
           </div>
         </div>
         <div className="flex w-full flex-col mt-8">
+          <div className="flex flex-col flex-1">
+            <div className="text-md font-bold text-[#373633] mb-4">
+              Mobile Number
+            </div>
+            <input
+              type="text"
+              placeholder="Enter Mobile Number"
+              class="input rounded-[48px] bg-transparent focus:outline-none border-[#1A1A1A30] input-md w-full max-w-xs"
+            />
+          </div>
+        </div>
+        <div className="flex w-full flex-col mt-8">
           <div className="text-md font-bold text-[#373633] mb-4">About you</div>
           <textarea
             placeholder="Bio"
@@ -65,6 +78,7 @@ export default function EditProfile() {
           ></textarea>
         </div>
       </div>
+      {/* Experience */}
       <div className="w-full mt-10 shadow-md rounded-xl bg-white">
         <div className="w-full flex flex-col items-start justify-between relative pl-8 pr-16 py-6">
           <div className="flex flex-row items-center flex-1 mb-8">
@@ -160,6 +174,7 @@ export default function EditProfile() {
           </button>
         </div>
       </div>
+      {/* Education (Graduate) */}
       <div className="w-full mt-10 shadow-md rounded-xl bg-white">
         <div className="w-full flex flex-col items-start justify-between relative pl-8 pr-16 py-6">
           <div className="flex flex-row items-center flex-1 mb-8">
