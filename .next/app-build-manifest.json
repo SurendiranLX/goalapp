@@ -6,30 +6,25 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/taskdetail/page": [
+    "/dashboard/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/taskdetail/page.js"
+      "static/chunks/app/dashboard/page.js"
     ],
-    "/tasks/page": [
+    "/goaldetail/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/tasks/page.js"
+      "static/chunks/app/goaldetail/page.js"
     ],
     "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
-    "/myprofile/page": [
+    "/create/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/myprofile/page.js"
-    ],
-    "/editprofile/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/editprofile/page.js"
+      "static/chunks/app/create/page.js"
     ]
   }
 }

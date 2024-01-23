@@ -14,10 +14,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={urbanist.className}>
-        <main className="flex min-h-screen flex-col items-center">
-          <Header />
+        <main className="flex min-h-screen max-w-[400px] bg-[#000] m-auto flex-col items-center">
           {children}
-          <Footer />
         </main>
       </body>
     </html>
