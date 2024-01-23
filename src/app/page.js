@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import card from "../../public/welcome.jpeg";
+import card from "../../public/welcome.png";
 
 
 import Marquee from "react-fast-marquee";
