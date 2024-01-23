@@ -17,6 +17,9 @@ export default function Dashboard() {
     <div className="w-full h-[100vh] relative">
       {/* Header */}
       <div className="flex flex-row relative items-center justify-start h-[80px] bg-[#ffffff20] px-[16px] w-full">
+      <Link href="/dashboard">
+        <div className="text-md text-lg text-white mr-4 p-3">Back</div>
+        </Link>
         <div className="flex flex-col">
           <div className="font-bold text-lg text-white">
             Three-Day Dinner Routine
